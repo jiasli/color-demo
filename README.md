@@ -1,6 +1,6 @@
 # Color Demo
 
-A demo showing how to use ANSI control sequence with [Virtual Terminal](https://docs.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences?redirectedfrom=MSDN).
+A demo showing how to use ANSI control sequence with [Virtual Terminal](https://docs.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences).
 
 ## Run
 
