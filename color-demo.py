@@ -87,7 +87,10 @@ def main():
     enable_vt_mode()
 
     # Print some emoji
-    print("🎃👻🦉🧙‍🔮")
+    # ✓: https://www.compart.com/en/unicode/U+2713
+    # ⦿: https://www.compart.com/en/unicode/U+29BF
+    # ⦾: https://www.compart.com/en/unicode/U+29BE
+    print("🎃👻🦉🧙‍🔮✓⦿⦾测试テスト")
 
     # Print text in the basic 16 colors
     for color in COLORS:
