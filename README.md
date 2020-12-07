@@ -26,7 +26,10 @@ python color_demo.py
 ![](img/pwsh-core.png)
 
 ### Default Windows PowerShell terminal
-![](img/win-powershell.png)
+![](img/windows-powershell.png)
+
+### Default Windows Command Prompt
+![](img/windows-cmd.png)
 
 
 ## References
