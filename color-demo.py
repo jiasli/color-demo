@@ -96,7 +96,7 @@ def main():
 
     # Print text in the basic 16 colors
     for color in COLORS:
-        text = "This is some text in {} {}. Please compare it in different terminals.".format(
+        text = "This is some text in {:14s} {}  █████████████████".format(
             color, COLORS[color].replace('\x1b', '\\x1b'))
         colored_text = COLORS[color] + text + DEFAULT
         print("{:14s}: {}".format(color, colored_text))
