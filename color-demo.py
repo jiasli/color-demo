@@ -44,7 +44,7 @@ def main():
     # ⦾: https://www.compart.com/en/unicode/U+29BE
     # 测试: "test" in Chinese
     # テスト: "test" in Japanese
-    print("🎃👻🦉🧙‍🔮✓⦿⦾测试テスト")
+    print("Test Unicode: 🎃👻🦉🧙‍🔮✓⦿⦾测试テスト")
 
     # Print text in the basic 16 colors
     for color in COLORS:
