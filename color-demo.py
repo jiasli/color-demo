@@ -5,7 +5,9 @@ import numpy
 
 DEFAULT = '\x1b[0m'
 
+# https://docs.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
 COLORS = {
+    'default': '\x1b[0m',
     'black': '\x1b[30m',
     'red': '\x1b[31m',
     'green': '\x1b[32m',
@@ -46,7 +48,7 @@ def main():
 
     # Print text in the basic 16 colors
     for color in COLORS:
-        text = "This is some text in {:14s} {}  █████████████████".format(
+        text = "This is some text in {:14s} {:8s}  █████████████████".format(
             color, COLORS[color].replace('\x1b', '\\x1b'))
         colored_text = COLORS[color] + text + DEFAULT
         print("{:14s}: {}".format(color, colored_text))
