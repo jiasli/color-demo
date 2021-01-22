@@ -1,3 +1,5 @@
+# Source: https://bugs.python.org/issue30075
+
 import ctypes
 import msvcrt
 import os
