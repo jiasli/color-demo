@@ -27,10 +27,17 @@ COLORS = {
 }
 
 
-def print_rgb(text, rgb):
-    esc = '\x1b[38;2;{};{};{}m'.format(*rgb)
+def print_with_esc(text, esc):
     esc_reset = '\x1b[0m'
     print(esc + text + esc_reset, end='')
+
+
+def print_rgb(text, rgb):
+    print_with_esc(text, '\x1b[38;2;{};{};{}m'.format(*rgb))
+
+
+def print_color_index(text, color_index):
+    print_with_esc(text, '\x1b[38;5;{}m'.format(color_index))
 
 
 def main():
@@ -52,6 +59,27 @@ def main():
             color, COLORS[color].replace('\x1b', '\\x1b'))
         colored_text = COLORS[color] + text + DEFAULT
         print("{:14s}: {}".format(color, colored_text))
+
+    print()
+
+    # Print text in the 256 color table
+    base = 16
+    print("  0~ 15 ", end='')
+    for i in range(base):
+        print_color_index("█", i)
+    print()
+    row = 6
+    column = 36
+    for i in range(0, row):
+        print(f"{base + i * column:3d}~{base + i * column + column - 1:3d} ", end='')
+        for j in range(0, column):
+            print_color_index("█", base + i * column + j)
+        print()
+    print("232~255 ", end='')
+    for i in range(232, 256):
+        print_color_index("█", i)
+    print()
+    print()
 
     # Draw an HSV map
     v = 1
